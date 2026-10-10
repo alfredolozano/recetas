@@ -1,0 +1,203 @@
+/* Variables de color y tipografía */
+:root {
+    --accent-color: #ff4757;  /* Rojo para oferta */
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #2f3542;
+    --text-muted: #747d8c;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal de la tarjeta */
+.product-container {
+    background-color: var(--card-bg);
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 24px;
+    text-align: center;
+}
+
+/* Insignia / Badge de oferta */
+.badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* Encabezado */
+.header h1 {
+    font-size: 1.8rem;
+    color: #1e272e;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+/* Imagen del Ebook */
+.image-wrapper {
+    margin: 15px 0 25px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+/* Descripción del contenido */
+.description {
+    text-align: left;
+    background-color: #f1f2f6;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.description h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #2f3542;
+}
+
+.recipe-list {
+    list-style: none;
+}
+
+.recipe-list li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #57606f;
+}
+
+.recipe-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Sección de Precio */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #2f3542;
+    margin-bottom: 4px;
+}
+
+.currency {
+    color: #2ed573;
+}
+
+.country {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.delivery-info {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+/* --- BOTÓN PRINCIPAL DE COMPRA DE ALTA VISIBILIDAD --- */
+
+.btn-buy-now {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto 5px auto;
+    
+    /* Fondo Degradado Naranja Vibrante */
+    background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%);
+    
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px 24px;
+    
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.45);
+    transition: all 0.3s ease;
+}
+
+.btn-buy-now:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(238, 82, 83, 0.55);
+}
+
+.btn-buy-now:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(238, 82, 83, 0.35);
+}
+
+.btn-buy-now .icon {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+/* Animación de Latido */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 107, 107, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+.btn-pulse {
+    animation: pulse 2s infinite;
+}
